@@ -227,7 +227,7 @@ print(f"A média aritmética das notas é: {media:.2f}")'''
 salario = 1000
 aumento = 0.015
 while ano_inicial <= 2004:
-    salario += salario * aumento
+    salario *= (1 + aumento)
     aumento *= 2
     ano_inicial += 1 
 print(int(salario))'''
