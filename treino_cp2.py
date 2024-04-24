@@ -19,11 +19,11 @@ else:
     valor_total = 0
     while True:
         print(f"""
-        ===== NOSSOS VINHOS ===== 
+        |===== NOSSOS VINHOS =====|
         1 - {vinho1} - R${preco1}
         2 - {vinho2} - R${preco2}
         3 - {vinho3} - R${preco3}
-        4 - Sair
+        4 - Sair do catálogo
         """)
         opcao = input("Escolha uma das opções digitando o número correspondente: \n-> ")
         
@@ -48,9 +48,8 @@ else:
         print("Retornando ao catálogo...")
     if valor_total < 100:
         valor_total += frete
+        print(f"\nFrete: R${frete:.2f}")
     else:
-        print("Frete grátis!")
-    print(f"""
-Valor da compra: R${valor_total}
-Endereço de entrega: {endereco}
-    """)
+        print("\nFrete grátis!")
+
+    print(f"Valor da compra: R${valor_total:.2f} \nEndereço de entrega: {endereco}")
