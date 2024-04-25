@@ -223,7 +223,7 @@ media = soma_notas/qntd_notas
 print(f"A média aritmética das notas é: {media:.2f}")'''
 
 #QUESTÃO 13
-'''ano_inicial = 1996
+'''ano_inicial = 1995
 salario = 1000
 aumento = 0.015
 while ano_inicial <= 2004:
@@ -233,3 +233,30 @@ while ano_inicial <= 2004:
 print(int(salario))'''
 
 #QUESTÃO 14
+'''intervalo1 = 0
+intervalo2 = 0
+intervalo3 = 0
+intervalo4 = 0
+i = 1
+while True:
+    num = input(f"Diga o {i}° número \n-> ")
+    while not num.isnumeric():
+        print("Digite um número!!")
+        num = input(f"Diga o {i}° número \n-> ")
+    num = int(num)
+    if num >= 0 and num <= 25:
+        intervalo1 += 1
+    elif num <= 50:
+        intervalo2 += 1
+    elif num <= 75:
+        intervalo3 += 1
+    elif num <= 100:
+        intervalo4 += 1
+    else:
+        break
+    i += 1
+print(f"[0-25]: {intervalo1} números.\n"
+      f"[26-50]: {intervalo2} números.\n"
+      f"[51-75]: {intervalo3} números.\n"
+      f"[76-100]: {intervalo4} números.")'''
+
