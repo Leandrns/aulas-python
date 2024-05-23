@@ -16,6 +16,7 @@ def busca_indice(lista, elemento):
     for i in range(len(lista)):
         if lista[i] == elemento:
             return i
+    return
 
 print("====== Seja bem-vindo(a) a Vinheria Agnello! ======")
 ano_nascimento = verifica_numero("Digite seu ano de nascimento\n-> ",
