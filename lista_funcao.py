@@ -43,11 +43,57 @@ numeros = [4, 7, 88, 99, 2, 13, 44]
 print(encontra_pares(numeros))'''
 
 # QUESTÃO 05
-def conta_letras(lista):
+'''def conta_letras(lista):
     quantidades = []
     for i in range(len(lista)):
         quantidades.append(len(lista[i]))
     return quantidades
 
 strings =["azul", "roxo", "amarelo", "lilás", "abacate"]
-print(conta_letras(strings))
+print(conta_letras(strings))'''
+
+# QUESTÃO 06
+'''def encontra_comuns(lista1, lista2):
+    comuns = []
+    for i in range(len(lista1)):
+        for j in range(len(lista2)):
+            if lista1[i] == lista2[j]:
+                comuns.append(lista1[i])
+                break
+    return comuns
+
+multiplos_2 = [2, 4, 6, 8, 10, 12, 14]
+multiplos_3 = [3, 6, 9, 12, 15, 18]
+multiplos_4 = [4, 8, 12, 16, 20]
+print(encontra_comuns(multiplos_4, multiplos_3))'''
+
+# QUESTÃO 07
+'''def verifica_crescente(numeros):
+    crescente = True
+    for i in range(len(numeros)-1):
+        if numeros[i+1] > numeros[i]:
+            crescente = True
+        else:
+            crescente = False
+            break
+
+    return crescente
+
+numeros_crescente = [1, 2, 3, 4]
+numeros_nao_crescente = [2, 3, 1, 4]
+print(verifica_crescente(numeros_crescente))'''
+
+# QUESTÃO 08
+'''def inverte_lista(lista):
+    lista_inversa = []
+    for i in range(len(lista)-1, -1, -1):
+        lista_inversa.append(lista[i])
+    return lista_inversa
+
+numeros = [2, 4, 6, 8]
+print(inverte_lista(numeros))'''
+
+# QUESTÃO 09
+
+
+# QUESTÃO 10
