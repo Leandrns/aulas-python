@@ -8,6 +8,6 @@ def forca_opcao(msg, lista_opcoes):
         opcao = input(msg)
     return opcao
 
-carros = ['Celta', 'Virtus', 'Camaro', 'Audi R8']
+'''carros = ['Celta', 'Virtus', 'Camaro', 'Audi R8']
 escolha_carro = forca_opcao("Escolha um carro: ", carros)
-print(f"Você escolheu o {escolha_carro}")
+print(f"Você escolheu o {escolha_carro}")'''
