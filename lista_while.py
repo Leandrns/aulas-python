@@ -166,7 +166,7 @@ while i <= 10:
     num = input(f"Digite o {i}° número: ")
     if not num.isnumeric():
         print("Não é um número!")
-        continue    #manda para a próxima repetição (foda-se oq ta em baixo)
+        continue    #manda para a próxima repetição (ignora oq ta em baixo)
     num = int(num)
     if num % 2 == 0:
         pares += 1
