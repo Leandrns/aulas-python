@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 def gera_fibonacci(qntd):
-    a = 1
+    a = 0
     b = 1
     fibo = []
     for i in range(qntd):
