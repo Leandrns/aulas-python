@@ -91,9 +91,27 @@ def remover():
         carros[key].pop(indice_remover)
     return
 
+
 def cadastrar():
     for key in carros.keys():
-        info = input(f"Digite o novo(a) {key}: ")
+        if dic_types[key] == int:
+            while True:
+                try:
+                    info = int(input(f"Digite o novo(a) {key}: "))
+                    break
+                except:
+                    print("Deve ser um número inteiro!")
+
+        elif dic_types[key] == float:
+            while True:
+                try:
+                    info = float(input(f"Digite o novo(a) {key}: "))
+                    break
+                except:
+                    print("Deve ser um número float!")
+
+        else:
+            info = input(f"Digite o novo(a) {key}: ")
         carros[key].append(info)
     return
 
@@ -110,20 +128,63 @@ def atualizar():
         carros[tipo_atualizacao][indice_escolha] = input(f"Digite o novo(a) {tipo_atualizacao} do carro {escolha}: ")
     return
 
+def converte_float(key):
+    while True:
+        try:
+            info = float(input(f"Diga o novo {key}: "))
+            break
+        except:
+            print("Deve ser float!")
+    return info
+
+
+def converte_int(key):
+    while True:
+        try:
+            info = int(input(f"Diga o novo {key}: "))
+            break
+        except:
+            print("Deve ser inteiro!")
+    return info
 
 carros = {
     'modelo': ['Opala', 'Marea', 'Kombi', 'Celta', 'Uno', 'Monza'],
     'potência (cv)': [172, 130, 250, 140, 100, 120],
-    'consumo (km/l)': [1, 3, 8, 7, 15, 2],
+    'consumo (km/l)': [1., 3., 8., 7., 15., 2.],
     'cor': ['laranja', 'verde', 'branco', 'preto', 'prata', 'vinho'],
     'ano': ['1972', '2004', '1985', '2014', '2001', '1975'],
-    'preço': [50, 10, 5, 1000000, 100, 200],
+    'preço (R$)': [50., 10., 5., 1000000., 100., 200.],
     'estoque': [10, 8, 7, 5, 11, 9]
 }
 
+dic_types = {
+    'potência (cv)': converte_int,
+    'consumo (km/l)': converte_float,
+    'preço (R$)': converte_int,
+    'estoque': converte_float
+}
+
+'''for key in dic_types.keys():
+    carros[key].append(dic_types[key](key))'''
+
+texto = "Bagre branco, branco bagre."
+texto = texto.lower()
+for char in ',.:;!?':
+    texto = texto.replace(char, '')
+print(texto)
+texto = texto.split(' ')
+print(texto)
+contagem = {}
+for palavra in texto:
+    if palavra in contagem.keys():
+        contagem[palavra] += 1
+    else:
+        contagem[palavra] = 1
+print(contagem)
+
 indices = {carros['modelo'][i]: i for i in range(len(carros['modelo']))}
 
-print(indices)
+'''print(indices)
 
 s_ou_n = ['sim', 'não']
 
@@ -155,5 +216,7 @@ else:
     else:
         atualizar()
     indices = {carros['modelo'][i]: i for i in range(len(carros['modelo']))}
-    print(pd.DataFrame(carros))
+    print(pd.DataFrame(carros))'''
+
+
 
