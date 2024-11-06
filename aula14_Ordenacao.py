@@ -86,12 +86,13 @@ def quick_sort(lista):   # o MELHOR
     print(menores, [pivo], maiores)
     menores_ordenada = quick_sort(menores)
     maiores_ordenada = quick_sort(maiores)
+    print(menores_ordenada + [pivo] + maiores_ordenada)
     return menores_ordenada + [pivo] + maiores_ordenada
 
 '''lista = quick_sort(lista)
 print(lista)'''
 
-def busca_binaria(lista, elem, inicio = 0, fim = None):
+def busca_binaria(lista, elem, inicio = 0, fim = None): # A lista deve estar ordenada
     if fim == None:
         fim = len(lista)-1
     if fim > inicio:
@@ -105,5 +106,6 @@ def busca_binaria(lista, elem, inicio = 0, fim = None):
         return busca_binaria(lista, elem, inicio, fim)
     raise ValueError(f"{elem} not in list")
 
-lista = [5,3,4,2,8,9,7,10,6,1]
+lista = [5,2,8,7,4,9,0,1,6,3]
+lista = quick_sort(lista)
 print(busca_binaria(lista, 2))
